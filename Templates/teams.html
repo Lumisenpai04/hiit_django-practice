@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+    <style>
+        /* Base page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        /* Container for the table to handle responsiveness */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        /* Table styling */
+        .styled-table {
+            border-collapse: collapse; /* Merges borders into a single line */
+            margin: 25px 0;
+            font-size: 0.9em;
+            width: 100%;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+        }
+
+        /* Header styling */
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        /* Padding for table cells */
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        /* Zebra striping for table body rows */
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        /* Thin border beneath each row */
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        /* Highlight effect when hovering over a row */
+        .styled-table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Employee Directory</h2>
+
+    <div class="table-container">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>FullName</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>Engineering</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>John Smith</td>
+                    <td>Design</td>
+                    <td>On Leave</td>
+                </tr>
+                <tr>
+                    <td>Alex Jones</td>
+                    <td>Marketing</td>
+                    <td>Active</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
