@@ -8,7 +8,7 @@ def home(request):
 
 
 def about(request):
-    return render(request, "about.html")
+    return HttpResponse("My About page!!!")
 
 def google(request):
     return redirect("https://google.com")
