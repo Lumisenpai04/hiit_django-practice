@@ -13,5 +13,10 @@ from django.db import models
 class Employees(models.Model):
     full_name = models.CharField(max_length=50)
     department = models.CharField(max_length=50)
-    staus = models.CharField(max_length=50)
+    status = models.CharField(max_length=50)
     year = models.IntegerField()
+    salary = models.IntegerField()
+    Allowance = models.IntegerField(default=30000)
+
+    def __str__(self):
+        return f"{self.full_name} {self.department} - {self.status}"

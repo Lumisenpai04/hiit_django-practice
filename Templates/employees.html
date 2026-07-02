@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teams</title>
+    <title>EMPLOYEES</title>
     <style>
         /* Base page styling */
         body {
@@ -59,7 +59,7 @@
 </head>
 <body>
 
-    <h2>Employee Directory</h2>
+    <h2>Employee Directory by {{programmer_name}}</h2>
 
     <div class="table-container">
         <table class="styled-table">
@@ -68,24 +68,22 @@
                     <th>FullName</th>
                     <th>Department</th>
                     <th>Status</th>
+                    <th>Year</th>
+                    <th>Salary</th>
+                    <th>Allowance</th>
                 </tr>
             </thead>
             <tbody>
+                {% for employees in employees %}
                 <tr>
-                    <td>Jane Doe</td>
-                    <td>Engineering</td>
-                    <td>Active</td>
+                    <td>{{employees.full_name}}</td>
+                    <td>{{employees.department}}</td>
+                    <td>{{employees.status}}</td>
+                    <td>{{employees.year}}</td>
+                    <td>{{employees.salary}}</td>
+                    <td>{{employees.Allowance}}</td>
                 </tr>
-                <tr>
-                    <td>John Smith</td>
-                    <td>Design</td>
-                    <td>On Leave</td>
-                </tr>
-                <tr>
-                    <td>Alex Jones</td>
-                    <td>Marketing</td>
-                    <td>Active</td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

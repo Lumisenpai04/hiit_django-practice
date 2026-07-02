@@ -1,5 +1,6 @@
 from django.shortcuts import render , redirect
-from django.http import HttpResponse
+from django.http import HttpResponse 
+from projectapp.models import Employees 
 
 # Create your views here.
 def home(request):
@@ -17,8 +18,10 @@ def about(request):
 def service(request):
     return render(request, "service.html")
 
-def teams(request):
-    return render(request, "teams.html")
+def employees(request):
+    employees = Employees.objects.all()
+    context = {"employees" : employees, "programmer_name": "pelumi"}
+    return render(request, "employees.html", context)
 
 def google(request):
     return redirect("https://google.com")
